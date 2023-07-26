@@ -58,9 +58,9 @@ def main():
     cue = cue.lower()
     if cue == "y":
         while True:
-            write_key = "B384P8GG2YUIPAXM"
-            read_key = "MG1800QAR6X7QCE6"
-            channel_id = 2172873
+            write_key = None
+            read_key = None
+            channel_id = None
 
             # call the thingspeak class
             # pass in your write API, read API, and channel ID

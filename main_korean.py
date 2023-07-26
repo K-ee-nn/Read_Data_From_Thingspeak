@@ -56,9 +56,9 @@ def main():
     cue = cue.lower()
     if cue == "y":
         while True:
-            write_key = "B384P8GG2YUIPAXM"
-            read_key = "MG1800QAR6X7QCE6"
-            channel_id = 2172873
+            write_key = None
+            read_key = None
+            channel_id = None
 
             # Thingspeak 클래스 호출
             # 쓰기 API, 읽기 API 및 채널 ID를 전달
