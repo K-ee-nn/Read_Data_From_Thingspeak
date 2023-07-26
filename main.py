@@ -1,23 +1,5 @@
-from urllib import request
-from urllib.request import urlopen
-import threading                    # import threadding
-import json                         # import json
-import random                       # import random
-import requests                     # import requests for web API
-import ssl
-import geocoder                     # for Locations
-import datetime                     # for date time
-from twilio.rest import Client      # for Sms
-from serial import Serial           # for arduino
-import numpy as np
-from Adafruit_IO import Client      # for Adafruit IO
-import os
-from os import system                # For Text to speech
-import paho.mqtt.publish as publish
-import sqlite3                       # for Database
-import paho.mqtt.publish as publish
-import urllib                        # for web Api
-import time                          # for delay
+import requests
+import time
 
 
 # define a class called Thingspeak
@@ -62,8 +44,8 @@ class Thingspeak(object):
             for x in field1:
                 # convert string to float
                 value = float(x['field1'])
-                # give condition if value is above 50
-                if value > 50.0:
+                # give condition if value is greater than 0
+                if value > 0:
                     print(f"Sucessfully received data : {value} from Thingspeak")
                 time.sleep(2) # delay for 2 seconds for each iteration
         except:
@@ -76,9 +58,9 @@ def main():
     cue = cue.lower()
     if cue == "y":
         while True:
-            write_key = None
-            read_key = None
-            channel_id = None
+            write_key = "B384P8GG2YUIPAXM"
+            read_key = "MG1800QAR6X7QCE6"
+            channel_id = 2172873
 
             # call the thingspeak class
             # pass in your write API, read API, and channel ID

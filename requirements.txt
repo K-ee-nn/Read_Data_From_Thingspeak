@@ -1,7 +1,1 @@
-adafruit_io==2.7.0
-geocoder==1.38.1
-numpy==1.25.1
-paho_mqtt==1.6.1
-pyserial==3.5
 Requests==2.31.0
-twilio==8.5.0
